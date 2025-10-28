@@ -1,13 +1,17 @@
 package se.sprinto.hakan.adventuregame.model;
 
 import se.sprinto.hakan.adventuregame.view.UI;
-
 public class DungeonRoom implements Room {
 
     @Override
     public void enterRoom(Player player, UI ui) {
         ui.showMessage("Du går ner i en kall fängelsehåla. En vätte står i vägen!");
-        Enemy goblin = new Enemy("Vätte", 20, 0, 5);
+        Enemy goblin = new Enemy.Builder()
+                .name("Vätte")
+                .health(20)
+                .score(0)
+                .strength(5)
+                .build();
 
         while (player.isAlive() && goblin.isAlive()) {
             String choice = ui.getInput("Vill du (a)ttackera eller (r)etirera?");
@@ -26,6 +30,7 @@ public class DungeonRoom implements Room {
                 break;
             }
         }
+
     }
 }
 

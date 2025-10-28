@@ -16,5 +16,6 @@ public class ForestRoom implements Room {
             ui.showMessage("Du ignorerar glittret och går vidare.");
         }
     }
+
 }
 

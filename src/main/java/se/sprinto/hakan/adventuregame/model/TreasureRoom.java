@@ -20,5 +20,6 @@ public class TreasureRoom implements Room {
         } else {
             ui.showMessage("Du lämnar kistan orörd.");
         }
+
     }
 }
