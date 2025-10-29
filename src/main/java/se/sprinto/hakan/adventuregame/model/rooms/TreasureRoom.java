@@ -1,5 +1,6 @@
-package se.sprinto.hakan.adventuregame.model;
+package se.sprinto.hakan.adventuregame.model.rooms;
 
+import se.sprinto.hakan.adventuregame.model.characters.Player;
 import se.sprinto.hakan.adventuregame.view.UI;
 
 public class TreasureRoom implements Room {
@@ -10,12 +11,13 @@ public class TreasureRoom implements Room {
 
         String choice = ui.getInput("Vill du försöka öppna kistan? (ja/nej)");
         if (choice.equalsIgnoreCase("ja")) {
-            if (player.hasFoundKey()) {
+            if (player.hasFoundAllKeys()) {
                 ui.showMessage("Du öppnar kistan med din nyckel!");
                 player.setOpenedChest(true);
+                player.setHasWon(true);
                 player.addScore(100);
             } else {
-                ui.showMessage("Kistan är låst, du saknar nyckeln...");
+                ui.showMessage("Kistan är låst, du behöver 3 nycklar för att öppna den...");
             }
         } else {
             ui.showMessage("Du lämnar kistan orörd.");

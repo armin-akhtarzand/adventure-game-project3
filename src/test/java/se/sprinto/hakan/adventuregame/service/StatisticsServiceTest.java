@@ -39,7 +39,7 @@ class StatisticsServiceTest {
              index0 = list.get(i).getScore();
              index1 = list.get(i+1).getScore();
 
-            //System.out.println(previous+","+current);
+            System.out.println(index0+","+index1);
 
             assertTrue(index0 > index1);
         }

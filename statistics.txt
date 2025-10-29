@@ -1,2 +1,13 @@
-Armin;170
-armin;170
+Armin;70
+Armin2;70
+Armin;70
+Armin;70
+Armin;70
+Armin;70
+Armin;70
+Armin;70
+Armin;290
+Armin;70
+Armin;70
+Armin;100
+Armin;350
