@@ -5,7 +5,7 @@ import se.sprinto.hakan.adventuregame.view.UI;
 
 public class Mermaid extends AbstractCharacter {
 
-    UI ui = new ScannerUI();
+
 
 
     private Mermaid(String name, int health, int score, int strength) {super(name, health, score, strength);}
@@ -17,7 +17,7 @@ public class Mermaid extends AbstractCharacter {
 
 
 
-    public void interact(Player player){
+    public void interact(Player player,UI ui) {
         int dmg = player.getHealth();
         int originalStrength = this.getStrength();
         boolean correct = false;
@@ -44,7 +44,7 @@ public class Mermaid extends AbstractCharacter {
             ui.showMessage("\nRustning: FENIXRUSTNINGEN");
             ui.showMessage(player.getName()+" känner sig som återfödd i lågor!");
             player.setFoundSecondKey(true);
-            player.newArmor();
+            //player.newArmor();
             player.setHasNewArmor(true);
             ui.showMessage("HP = " + player.getHealth());
             player.addScore(50);

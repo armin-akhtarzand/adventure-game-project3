@@ -80,6 +80,9 @@ public class Player extends AbstractCharacter {
     }
     public void setHasNewArmor(boolean hasNewArmor) {
         this.hasNewArmor = hasNewArmor;
+        if(hasNewArmor){
+            setHealth(200);
+        }
     }
 
     @Override

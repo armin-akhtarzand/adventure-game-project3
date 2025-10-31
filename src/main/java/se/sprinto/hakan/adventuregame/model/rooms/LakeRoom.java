@@ -25,7 +25,7 @@ public class LakeRoom implements Room {
                     .build();
             ui.showMessage("Hon binder din kropp inom en vattenbubbla, du är fast!");
 
-            mermaid.interact(player);
+            mermaid.interact(player,ui);
         }else{
             ui.showMessage("Du ser en stor sjö framför dig, en sjöjungfru simmar mot dig med full fart!");
             ui.showMessage("Hon stannar upp! Hon har hört om draken du dräpt, hon vet vad du vill ha...");

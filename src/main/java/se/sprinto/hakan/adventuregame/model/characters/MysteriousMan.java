@@ -5,7 +5,6 @@ import se.sprinto.hakan.adventuregame.view.UI;
 
 public class MysteriousMan extends AbstractCharacter {
     TownRoom townRoom;
-    UI ui = new ScannerUI();
     private boolean walkAway;
 
 
@@ -15,7 +14,7 @@ public class MysteriousMan extends AbstractCharacter {
     public void attack(AbstractCharacter target) {target.setHealth(target.getHealth() - this.getStrength());}
 
 
-    public void interact(Player player){
+    public void interact(Player player,UI ui){
         int dmg = player.getHealth();
         int originalStrength = this.getStrength();
         if(walkAway){

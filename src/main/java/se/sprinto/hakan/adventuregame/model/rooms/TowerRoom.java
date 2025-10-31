@@ -23,7 +23,7 @@ public class TowerRoom implements Room {
 
 
 
-        ui.showMessage("Du kommer till brinnande torn, på toppen utav tornet sitter en drake och vaktar!");
+        ui.showMessage("Du kommer till ett brinnande torn, på toppen utav tornet sitter en drake och vaktar!");
         Dragon dragon = new Dragon.Builder()
                 .health(110)
                 .strength(15)
@@ -37,7 +37,7 @@ public class TowerRoom implements Room {
             ui.showMessage("Du känner ingen hetta från drakens eld," +
                     " din nya rustning ger dig ett brinnande självförtroende\n");
         }
-        dragon.interact(player);
+        dragon.interact(player,ui);
 
     }
 }

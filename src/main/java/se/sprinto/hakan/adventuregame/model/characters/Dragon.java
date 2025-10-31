@@ -6,7 +6,6 @@ import se.sprinto.hakan.adventuregame.view.UI;
 import java.util.Random;
 
 public class Dragon extends AbstractCharacter {
-    UI ui = new ScannerUI();
     private Random random = new Random();
 
 
@@ -19,10 +18,10 @@ public class Dragon extends AbstractCharacter {
     public int getStrength() {return super.getStrength();}
     public void setStrength(int strength) {super.setStrength(strength);}
 
-    public void interact(Player player) {
+    public void interact(Player player, UI ui) {
 
         if(!player.getHasNewArmor()){
-            setStrength(getStrength()+random.nextInt(6));
+            setStrength(getStrength()+random.nextInt(5)+1);
         }while (player.isAlive() && isAlive()) {
             String choice = ui.getInput("Vill du (a)ttackera eller (r)etirera?");
             if (choice.equalsIgnoreCase("a")) {

@@ -41,7 +41,7 @@ public class TownRoom implements Room {
             else{
                 npc.setWalkAway(true);
             }
-            npc.interact(player);
+            npc.interact(player ,ui);
         }else{
             ui.showMessage("Du kliver in i staden, du ser glada miner och hör musiken från stadens alla värdshus ");
             ui.showMessage("Inget är utöver det vanliga, du går tillbaka till start rummet");
