@@ -4,8 +4,7 @@ public class Player extends AbstractCharacter {
     private boolean foundFirstKey;
     private boolean foundSecondKey;
     private boolean foundThirdKey;
-    private boolean foundAllKeys;
-    private boolean defeatedEnemy;
+    private boolean defeatedGoblin;
     private boolean openedChest;
     private boolean hasNewArmor = false;
     private boolean dragonSlayed;
@@ -41,13 +40,13 @@ public class Player extends AbstractCharacter {
 
 
 
-    public boolean hasDefeatedEnemy() {
-        return defeatedEnemy;
+    public boolean hasDefeatedGoblin() {
+        return defeatedGoblin;
     }
 
 
-    public void setDefeatedEnemy(boolean defeatedEnemy) {
-        this.defeatedEnemy = defeatedEnemy;
+    public void setDefeatedGoblin(boolean defeatedGoblin) {
+        this.defeatedGoblin = defeatedGoblin;
     }
 
     public boolean hasOpenedChest() {
@@ -72,10 +71,7 @@ public class Player extends AbstractCharacter {
     public void newSword() {
         setStrength(20);
     }
-    public void newArmor() {
-        setHealth(200);
-    }
-    public boolean getHasNewArmor() {
+    public boolean hasNewArmor() {
         return hasNewArmor;
     }
     public void setHasNewArmor(boolean hasNewArmor) {

@@ -27,10 +27,13 @@ class TreasureRoomTest {
 
         fakeUI.setInput("ja");
         forestRoom.enterRoom(player,fakeUI);
+        player.setFoundFirstKey(true);
+        player.setFoundSecondKey(true);
+        player.setFoundThirdKey(true);
     }
 
     @Test
-    void playerOpensChestWithKey() {
+    void playerOpensChestWithKeys() {
         treasureRoom.enterRoom(player, fakeUI);
         assertTrue(player.hasOpenedChest());
     }

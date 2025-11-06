@@ -12,7 +12,7 @@ public class LakeRoomTest {
     private LakeRoom lakeRoom;
     private FakeUI fakeUI;
     private Player player;
-    int expectedHP;
+    int expectedHealthWithArmor;
 
     @BeforeEach
     void setUp() {
@@ -22,7 +22,7 @@ public class LakeRoomTest {
                 .health(10)
                 .build();
 
-        expectedHP = 200;
+        expectedHealthWithArmor = 200;
     }
 
 
@@ -31,13 +31,13 @@ public class LakeRoomTest {
         fakeUI.setInput("regn");
         lakeRoom.enterRoom(player,fakeUI);
 
-        Assertions.assertTrue(player.getHasNewArmor());;
+        Assertions.assertTrue(player.hasNewArmor());
     }
     @Test
     void correctAnswerIncreaseHealth() {
         fakeUI.setInput("regn");
         lakeRoom.enterRoom(player,fakeUI);
-        Assertions.assertTrue(player.getHealth() == expectedHP);
+        Assertions.assertTrue(player.getHealth() == expectedHealthWithArmor);
     }
 
     @Test

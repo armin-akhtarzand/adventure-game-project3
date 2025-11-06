@@ -32,7 +32,7 @@ public class MysteriousMan extends AbstractCharacter {
             ui.showMessage(player.getName()+"s styrka växer!");
             ui.showMessage("STR = " + player.getStrength());
 
-            ui.showMessage("\n2 till dörrar har dykt upp i startrummet!");
+            ui.showMessage("\n2 nya dörrar har dykt upp i startrummet!");
 
         }
 

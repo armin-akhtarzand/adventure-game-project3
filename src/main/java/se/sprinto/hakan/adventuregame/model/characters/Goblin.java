@@ -1,12 +1,12 @@
 package se.sprinto.hakan.adventuregame.model.characters;
 
-public class Enemy extends AbstractCharacter {
+public class Goblin extends AbstractCharacter {
 
-    private Enemy(String name, int health, int score, int strength) {
+    private Goblin(String name, int health, int score, int strength) {
         super(name, health, score, strength);
     }
 
-    private Enemy (Builder builder) {
+    private Goblin(Builder builder) {
         this(builder.name, builder.health, builder.score, builder.strength);
     }
 
@@ -38,8 +38,8 @@ public class Enemy extends AbstractCharacter {
             this.name = name;
             return this;
         }
-        public Enemy build(){
-            return new Enemy(this);
+        public Goblin build(){
+            return new Goblin(this);
         }
 
     }

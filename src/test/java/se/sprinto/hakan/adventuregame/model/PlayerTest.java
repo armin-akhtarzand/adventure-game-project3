@@ -2,7 +2,7 @@ package se.sprinto.hakan.adventuregame.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import se.sprinto.hakan.adventuregame.model.characters.Enemy;
+import se.sprinto.hakan.adventuregame.model.characters.Goblin;
 import se.sprinto.hakan.adventuregame.model.characters.Player;
 import se.sprinto.hakan.adventuregame.view.FakeUI;
 
@@ -12,7 +12,7 @@ class PlayerTest {
 
     Player player;
     FakeUI fakeUI;
-    Enemy enemy;
+    Goblin goblin;
 
     @BeforeEach
     void setUp() {
@@ -20,7 +20,7 @@ class PlayerTest {
         player = new Player.Builder()
                 .strength(10)
                 .build();
-        enemy = new Enemy.Builder()
+        goblin = new Goblin.Builder()
                 .health(20)
                 .build();
     }
@@ -29,9 +29,9 @@ class PlayerTest {
 
     @Test
     void attackReduceEnemyHealth() {
-        player.attack(enemy);
+        player.attack(goblin);
 
-        assertEquals(10,enemy.getHealth());
+        assertEquals(10, goblin.getHealth());
 
     }
 }

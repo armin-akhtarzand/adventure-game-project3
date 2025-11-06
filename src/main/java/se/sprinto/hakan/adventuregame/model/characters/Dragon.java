@@ -1,6 +1,5 @@
 package se.sprinto.hakan.adventuregame.model.characters;
 
-import se.sprinto.hakan.adventuregame.view.ScannerUI;
 import se.sprinto.hakan.adventuregame.view.UI;
 
 import java.util.Random;
@@ -20,7 +19,7 @@ public class Dragon extends AbstractCharacter {
 
     public void interact(Player player, UI ui) {
 
-        if(!player.getHasNewArmor()){
+        if(!player.hasNewArmor()){
             setStrength(getStrength()+random.nextInt(5)+1);
         }while (player.isAlive() && isAlive()) {
             String choice = ui.getInput("Vill du (a)ttackera eller (r)etirera?");

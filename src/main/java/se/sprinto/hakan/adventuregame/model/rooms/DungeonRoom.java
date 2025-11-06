@@ -1,19 +1,19 @@
 package se.sprinto.hakan.adventuregame.model.rooms;
 
-import se.sprinto.hakan.adventuregame.model.characters.Enemy;
+import se.sprinto.hakan.adventuregame.model.characters.Goblin;
 import se.sprinto.hakan.adventuregame.model.characters.Player;
 import se.sprinto.hakan.adventuregame.view.UI;
 public class DungeonRoom implements Room {
 
     @Override
     public void enterRoom(Player player, UI ui) {
-        Enemy goblin = new Enemy.Builder()
+        Goblin goblin = new Goblin.Builder()
                 .name("Vätte")
                 .health(20)
                 .score(0)
                 .strength(5)
                 .build();
-        if(player.hasDefeatedEnemy()) {
+        if(player.hasDefeatedGoblin()) {
             ui.showMessage("Vätten är dräpt, fängelsehålan stor nu tom..");
             return;
         }
@@ -28,7 +28,7 @@ public class DungeonRoom implements Room {
                     ui.showMessage("Vätten attackerar dig! Ditt HP: " + player.getHealth());
                 } else {
                     ui.showMessage("Du besegrade vätten!");
-                    player.setDefeatedEnemy(true);
+                    player.setDefeatedGoblin(true);
                 }
             } else if (choice.equalsIgnoreCase("r")) {
                 ui.showMessage("Du springer därifrån!");

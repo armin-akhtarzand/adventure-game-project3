@@ -23,7 +23,7 @@ public class TownRoom implements Room {
             return;
         }
 
-        if(player.hasFoundFirstKey()&&player.hasDefeatedEnemy()) {
+        if(player.hasFoundFirstKey()&&player.hasDefeatedGoblin()) {
             ui.showMessage("Du kliver in i staden, en mystiskt man med luva går fram till dig");
             MysteriousMan npc = new MysteriousMan.Builder()
                     .name("Myserious Man")

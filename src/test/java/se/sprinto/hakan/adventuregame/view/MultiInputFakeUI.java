@@ -2,7 +2,7 @@ package se.sprinto.hakan.adventuregame.view;
 
 import java.util.List;
 
-public class MultiInputUI implements UI {
+public class MultiInputFakeUI implements UI {
     private List <String> inputs;
     private int currentIndex = 0;
 

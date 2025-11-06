@@ -7,7 +7,7 @@ import se.sprinto.hakan.adventuregame.model.characters.Dragon;
 import se.sprinto.hakan.adventuregame.model.characters.Player;
 import se.sprinto.hakan.adventuregame.model.rooms.TowerRoom;
 import se.sprinto.hakan.adventuregame.view.FakeUI;
-import se.sprinto.hakan.adventuregame.view.MultiInputUI;
+import se.sprinto.hakan.adventuregame.view.MultiInputFakeUI;
 import java.util.List;
 
 public class TowerRoomTest {
@@ -19,23 +19,26 @@ public class TowerRoomTest {
     private int expectedHealthAfterBaseDMG;
     private int dragonStartHealth;
     int dragonHealthAfterAttack;
-    private MultiInputUI multiUI;
+    int dragonDamage;
+    private MultiInputFakeUI multiUI;
 
     @BeforeEach
     public void setUp() {
         towerRoom = new TowerRoom();
-        multiUI = new MultiInputUI();
+        multiUI = new MultiInputFakeUI();
         player = new Player.Builder()
                 .strength(10)
                 .health(100)
                 .build();
         dragonStartHealth = 110;
+        dragonDamage = 15;
+
     }
 
     @Test
     void takesExtraDamageWithoutArmor(){
         player.setHasNewArmor(false);
-        expectedHealthAfterBaseDMG = player.getHealth()-15;
+        expectedHealthAfterBaseDMG = player.getHealth()-dragonDamage;
         multiUI.setInputs(List.of("a","r"));
         towerRoom.enterRoom(player,multiUI);
 
@@ -46,7 +49,7 @@ public class TowerRoomTest {
     @Test
     void takesNoExraDamageWithArmor(){
         player.setHasNewArmor(true);
-        expectedHealthAfterBaseDMG = player.getHealth()-15;
+        expectedHealthAfterBaseDMG = player.getHealth()-dragonDamage;
         multiUI.setInputs(List.of("a","r"));
         towerRoom.enterRoom(player,multiUI);
 

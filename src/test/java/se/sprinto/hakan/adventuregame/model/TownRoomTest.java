@@ -28,7 +28,7 @@ public class TownRoomTest {
 
         expectedSTR = 20;
 
-        player.setDefeatedEnemy(true);
+        player.setDefeatedGoblin(true);
         player.setFoundFirstKey(true);
     }
 

@@ -1,7 +1,6 @@
 package se.sprinto.hakan.adventuregame.model.rooms;
 
 import se.sprinto.hakan.adventuregame.model.characters.Dragon;
-import se.sprinto.hakan.adventuregame.model.characters.Mermaid;
 import se.sprinto.hakan.adventuregame.model.characters.Player;
 import se.sprinto.hakan.adventuregame.view.ScannerUI;
 import se.sprinto.hakan.adventuregame.view.UI;
@@ -18,7 +17,6 @@ public class TowerRoom implements Room {
             ui.showMessage("Tornet brinner inte längre, du ser drakens kvarlevor framför dig..");
             ui.showMessage("Du går tillbaka till startrummet");
             return;
-
         }
 
 
@@ -30,7 +28,7 @@ public class TowerRoom implements Room {
                 .build();
 
 
-        if (!player.getHasNewArmor()) {
+        if (!player.hasNewArmor()) {
             ui.showMessage("OBS: Din rustning är inte flamsäker! Drakens eld gör extra skada!\n");
 
         }else{

@@ -27,11 +27,11 @@ class DungeonRoomTest{
     }
 
     @Test
-    void playerDefeatsEnemyTest() {
+    void playerDefeatsGoblinTest() {
         fakeUI.setInput("a");
         dungeonRoom.enterRoom(player, fakeUI);
 
 
-        assertTrue(player.hasDefeatedEnemy());
+        assertTrue(player.hasDefeatedGoblin());
     }
 }
