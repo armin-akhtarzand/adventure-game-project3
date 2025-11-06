@@ -32,16 +32,16 @@ class StatisticsServiceTest {
     @Test
     void statisticsSortedInPointsOrder() {
         List<Statistics> list = service.getSortedStatistics();
-        int index0 = 0;
-        int index1 = 0;
+        int scoreNow = 0;
+        int scoreNext = 0;
 
         for(int i = 0; i<list.size()-1;i++){
-             index0 = list.get(i).getScore();
-             index1 = list.get(i+1).getScore();
+             scoreNow = list.get(i).getScore();
+             scoreNext = list.get(i+1).getScore();
 
-            System.out.println(index0+","+index1);
+            System.out.println(scoreNow +","+ scoreNext);
 
-            assertTrue(index0 > index1);
+            assertTrue(scoreNow > scoreNext);
         }
 
 
