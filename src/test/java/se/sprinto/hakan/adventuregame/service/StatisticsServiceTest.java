@@ -39,7 +39,7 @@ class StatisticsServiceTest {
              scoreNow = list.get(i).getScore();
              scoreNext = list.get(i+1).getScore();
 
-            System.out.println(scoreNow +","+ scoreNext);
+
 
             assertTrue(scoreNow > scoreNext);
         }

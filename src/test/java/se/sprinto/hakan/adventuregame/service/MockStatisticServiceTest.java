@@ -48,7 +48,7 @@ public class MockStatisticServiceTest {
             scoreNow = list.get(i).getScore();
             scoreNext = list.get(i+1).getScore();
 
-            assertTrue(scoreNow >= scoreNext);
+            assertTrue(scoreNow > scoreNext);
         }
     }
 }
